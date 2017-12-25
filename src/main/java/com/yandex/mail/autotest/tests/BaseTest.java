@@ -3,6 +3,7 @@ package com.yandex.mail.autotest.tests;
 
 import com.yandex.mail.autotest.helpers.SendEmailHelper;
 import com.yandex.mail.autotest.domain.TestUser;
+import com.yandex.mail.autotest.webdriver.Driver;
 import com.yandex.mail.autotest.webpages.client.AbstractEmailClientPage;
 import com.yandex.mail.autotest.webpages.client.ComposeEmailPage;
 import com.yandex.mail.autotest.webpages.client.InboxPage;
@@ -10,6 +11,7 @@ import com.yandex.mail.autotest.webpages.client.StartPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+import org.testng.annotations.AfterMethod;
 
 @ContextConfiguration(classes = {com.yandex.mail.autotest.spring.Config.class})
 public abstract class BaseTest extends AbstractTestNGSpringContextTests {
@@ -36,6 +38,11 @@ public abstract class BaseTest extends AbstractTestNGSpringContextTests {
                 .inputUsername(testUser.getUsername())
                 .inputPassword(testUser.getPassword())
                 .clickSignInButton();
+    }
+
+    @AfterMethod
+    public void afterMethod() {
+        Driver.killDriver();
     }
 
 }

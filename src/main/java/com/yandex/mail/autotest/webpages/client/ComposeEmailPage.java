@@ -2,13 +2,11 @@ package com.yandex.mail.autotest.webpages.client;
 
 import com.yandex.mail.autotest.webelements.Element;
 import com.yandex.mail.autotest.webelements.annotations.Locator;
-import com.yandex.mail.autotest.webpages.BaseWebPage;
 import com.yandex.mail.autotest.webpages.annotations.WebPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 @WebPage
-public class ComposeEmailPage extends BaseWebPage<ComposeEmailPage> {
+public class ComposeEmailPage extends AbstractEmailClientPage<ComposeEmailPage> {
 
     @Locator(css = "div.ns-view-compose-field-to .js-compose-field")
     private Element toField;

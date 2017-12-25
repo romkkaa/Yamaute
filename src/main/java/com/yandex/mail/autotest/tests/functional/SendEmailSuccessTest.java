@@ -1,6 +1,7 @@
-package com.yandex.mail.autotest.tests;
+package com.yandex.mail.autotest.tests.functional;
 
 
+import com.yandex.mail.autotest.tests.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
