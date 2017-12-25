@@ -35,7 +35,7 @@ public abstract class AbstractEmailClientPage<T> extends BaseWebPage<T> {
     }
 
     public AbstractEmailClientPage selectEmailBySubject(String subject) {
-        Driver.getDriver().findElement(By.xpath("//span[text()='" + subject + "']/ancestor::div[@class='mail-MessageSnippet-Content']//input[@type='checkbox']"));
+        Driver.getDriver().findElement(By.xpath("//span[text()='" + subject + "']/ancestor::div[@class='mail-MessageSnippet-Content']//label[@data-nb='checkbox']")).click();
         return this;
     }
 
