@@ -1,3 +1,3 @@
 # Yamaute
 
-Запуск тестов командой mnv test -Dusername="ваш@юзер.нейм" -Dpassword="Ваш123Пароль"
+Запуск тестов командой mvn test -Dusername="john.doe.test.001@yandex.com" -Dpassword="test123!"
